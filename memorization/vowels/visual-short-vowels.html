@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Short Vowels | Visual</title>
+  <link rel="stylesheet" href="../../css/visual-short-vowels.css" />
+</head>
+<body>
+  <div class="bg-noise"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-top">
+        <span class="chip">Short Vowels</span>
+        <span class="chip soft">Visual Mode</span>
+      </div>
+
+      <h1>See the sound. Map the mouth.</h1>
+      <p class="hero-copy">
+        Tap a vowel symbol to update the mouth map, tongue position, and example anchor. Clean repetition, no clutter.
+      </p>
+    </section>
+
+    <section class="workspace">
+      <div class="workspace-head">
+        <div>
+          <p class="workspace-label">Current symbol</p>
+          <h3 id="titleSymbol">/ɪ/</h3>
+        </div>
+        <p class="workspace-note" id="titleNote">
+          Front, near-close, relaxed vowel.
+        </p>
+      </div>
+
+      <div class="layout">
+        <section class="map-card">
+          <div class="panel-top">
+            <div>
+              <p class="mini-label">Vowel Quadrilateral</p>
+              <h4>Mouth map</h4>
+            </div>
+            <button class="small-btn" id="shuffleBtn" type="button">Shuffle</button>
+          </div>
+
+          <div class="map-wrap">
+            <div class="map-frame" id="mapFrame">
+              <div class="map-outline"></div>
+
+              <div class="map-label top-left">Front</div>
+              <div class="map-label top-right">Back</div>
+              <div class="map-label bottom-left">Open</div>
+              <div class="map-label bottom-right">Close</div>
+
+              <div class="zone zone-front-high">front high</div>
+              <div class="zone zone-front-mid">front mid</div>
+              <div class="zone zone-front-open">front open</div>
+              <div class="zone zone-central">central</div>
+              <div class="zone zone-back-mid">back mid</div>
+              <div class="zone zone-back-close">back close</div>
+
+              <div id="dotLayer"></div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="symbol-pill" id="symbolPill">/ɪ/</div>
+            <div>
+              <h5 id="soundName">KIT sound</h5>
+              <p id="soundDesc">Front, near-close, relaxed vowel.</p>
+            </div>
+          </div>
+
+          <div class="position-box">
+            <p class="position-title">Tongue position</p>
+            <p id="tongueText">Forward and high-ish, but relaxed.</p>
+          </div>
+        </section>
+
+        <aside class="side-card">
+          <div class="panel-top">
+            <div>
+              <p class="mini-label">Pick a vowel</p>
+              <h4>Tap to change the map</h4>
+            </div>
+          </div>
+
+          <div class="symbol-list" id="symbolList"></div>
+
+          <div class="example-box">
+            <p class="mini-label">Anchor word</p>
+            <h4 id="anchorWord">sit</h4>
+            <p id="anchorNote">A simple word to lock the sound in memory.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="practice-cta">
+  <div class="cta-card">
+    <div class="cta-text">
+      <p class="mini-label">Ready?</p>
+      <h3>Test your visual recognition</h3>
+      <p>Lock in what you’ve seen. Move to practice and sharpen accuracy.</p>
+    </div>
+
+    <a href="../../practice-short-vowels/visual-practice.html" class="cta-btn">
+      Start Practice
+      
+    </a>
+  </div>
+</section>
+
+  </main>
+
+  <script src="../../js/visual-short-vowels.js"></script>
+</body>
+</html>

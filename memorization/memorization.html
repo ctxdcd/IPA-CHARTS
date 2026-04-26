@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phonetic Studio</title>
+  <link rel="stylesheet" href="../css/memorization-homepage.css" />
+</head>
+<body>
+  <div class="bg-noise"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <main class="app">
+    <section class="hero">
+      <div class="hero-top">
+        <span class="pill">Phonetic Studio</span>
+        <span class="pill ghost">No pressure mode</span>
+      </div>
+
+      <h1>Train your speech like it’s a skill game.</h1>
+      <p class="hero-copy">
+        Clean, fast, and a little addictive. Pick a path, open the folder, and keep it moving.
+      </p>
+    </section>
+
+    <section class="card-grid" aria-label="Practice paths">
+      <button class="path-card active" data-target="monophthongs" type="button">
+        <div class="card-head">
+          <span class="card-badge blue">01</span>
+          <span class="card-tag">Vowel</span>
+        </div>
+        <h2>Monophthongs</h2>
+        <p>Pure, single vowel sounds.</p>
+        <div class="card-foot">
+          <span>Short + Long</span>
+          <span>Check it out!</span>
+        </div>
+      </button>
+
+      <button class="path-card" data-target="diphthongs" type="button">
+        <div class="card-head">
+          <span class="card-badge green">02</span>
+          <span class="card-tag">Vowel</span>
+        </div>
+        <h2>Diphthongs</h2>
+        <p>Double vowels that move.</p>
+        <div class="card-foot">
+          <span>8 combinations</span>
+          <span>Check it out!</span>
+        </div>
+      </button>
+
+      <button class="path-card" data-target="consonants" type="button">
+        <div class="card-head">
+          <span class="card-badge pink">03</span>
+          <span class="card-tag">Consonants</span>
+        </div>
+        <h2>Consonants</h2>
+        <p>The mechanics of air blocking.</p>
+        <div class="card-foot">
+          <span>Plosives, fricatives</span>
+          <span>Check it out!</span>
+        </div>
+      </button>
+
+      <button class="path-card master" data-target="mixedmaster" type="button">
+        <div class="card-head">
+          <span class="card-badge gold">04</span>
+          <span class="card-tag">Boss level</span>
+        </div>
+        <h2>Mixed Master</h2>
+        <p>Full sentence transcription.</p>
+        <div class="card-foot">
+          <span>Final challenge</span>
+          <span>Check it out!</span>
+        </div>
+      </button>
+    </section>
+
+    <section class="folder-panel" id="folderPanel" aria-live="polite">
+      <div class="folder-top">
+        <div>
+          <p class="folder-label">Selected path</p>
+          <h3 id="folderTitle">Monophthongs</h3>
+        </div>
+
+        <p class="folder-note" id="folderSubtitle">
+          Choose a level and keep the momentum.
+        </p>
+      </div>
+
+      <div class="folder-content active" id="monophthongs">
+        <a class="folder-button primary" href="../memorization/vowels/short-vowels.html">
+          <span>Short Vowels</span>
+          <small>Warm-up set</small>
+        </a>
+
+        <a class="folder-button" href="../memorization/vowels/long-vowels.html">
+          <span>Long Vowels</span>
+          <small>Week 4 focus</small>
+        </a>
+      </div>
+
+      <div class="folder-content" id="diphthongs">
+        <a class="folder-button primary" href="diphthongs-1.html">
+          <span>First 4 Diphthongs</span>
+          <small>Opening glide patterns</small>
+        </a>
+
+        <a class="folder-button" href="diphthongs-2.html">
+          <span>Second 4 Diphthongs</span>
+          <small>Complete the set</small>
+        </a>
+      </div>
+
+      <div class="folder-content" id="consonants">
+        <a class="folder-button primary" href="plosives.html">
+          <span>Plosives</span>
+          <small>Sharp air release</small>
+        </a>
+
+        <a class="folder-button" href="fricatives.html">
+          <span>Fricatives</span>
+          <small>Friction sounds</small>
+        </a>
+
+        <a class="folder-button" href="nasals-others.html">
+          <span>Nasals &amp; Others</span>
+          <small>Resonant sounds</small>
+        </a>
+      </div>
+
+      <div class="folder-content" id="mixedmaster">
+        <a class="folder-button primary gold" href="mixed-master.html">
+          <span>Enter Final Mode</span>
+          <small>Full sentence transcription</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="footer-strip">
+      <p>Still on progress!</p>
+    </section>
+  </main>
+
+  <script src="../js/memorization-homepage.js"></script>
+</body>
+</html>
