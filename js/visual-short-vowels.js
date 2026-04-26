@@ -42,7 +42,7 @@ const sounds = [
     word: "cat",
     logic: "Open, bright, and wide — a strong visual hook like an apple sitting clearly in front of you.",
     compare: "/kæt/",
-    asset: ""
+    asset: "../../../../assets/thropy.glb"
   },
   {
     symbol: "/ʌ/",
@@ -229,7 +229,10 @@ function closeModal() {
   flipCard.classList.remove("flipped");
 }
 
-flipCard.addEventListener("click", () => {
+flipCard.addEventListener("click", (e) => {
+  // Ignore anything inside 3D area
+  if (e.target.closest("model-viewer") || e.target.closest("#modalAsset")) return;
+
   flipCard.classList.toggle("flipped");
 });
 
@@ -241,6 +244,13 @@ flipCard.addEventListener("keydown", (e) => {
 });
 
 modalOverlay.addEventListener("click", closeModal);
+
+// 👇 ADD THIS RIGHT HERE
+modal.addEventListener("click", (e) => {
+  if (!e.target.closest(".flip-card")) {
+    closeModal();
+  }
+});
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("active")) {
