@@ -1,0 +1,121 @@
+:root {
+  --bg: #0b1020;
+  --card: rgba(255,255,255,0.05);
+  --stroke: rgba(255,255,255,0.08);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --blue: #4ea1ff;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #18223a, var(--bg));
+  color: var(--text);
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(78,161,255,0.15), transparent 40%);
+  pointer-events: none;
+}
+
+.app {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 40px 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 10px 0;
+  letter-spacing: -0.04em;
+}
+
+.sub {
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 20px;
+  backdrop-filter: blur(16px);
+}
+
+.head h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: rgba(78,161,255,0.2);
+}
+
+#sounds {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sound {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--stroke);
+  cursor: pointer;
+}
+
+.sound:hover {
+  border-color: rgba(78,161,255,0.3);
+}

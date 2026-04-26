@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auditory Loop Trainer</title>
+  <link rel="stylesheet" href="../../css/auditory.css" />
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <main class="app">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="chip">Auditory Mode</p>
+      <h1>Hear it. Repeat it. Lock it.</h1>
+      <p class="sub">
+        No theory overload. Just sound repetition until your brain stops translating and starts reacting.
+      </p>
+    </section>
+
+    <!-- MAIN GRID -->
+    <section class="grid">
+
+      <!-- LOOP CONTROL -->
+      <div class="card main">
+        <div class="head">
+          <div>
+            <p class="label">Loop Engine</p>
+            <h2>Automatic repetition</h2>
+          </div>
+        </div>
+
+        <p id="status">Tap start to begin sound loop.</p>
+
+        <div class="controls">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+          <button id="speak">Speak</button>
+        </div>
+      </div>
+
+      <!-- SOUND LIST -->
+      <div class="card list">
+        <div class="head">
+          <div>
+            <p class="label">Sound Bank</p>
+            <h2>Tap to hear</h2>
+          </div>
+        </div>
+
+        <div id="sounds"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../../js/auditory.js"></script>
+</body>
+</html>
