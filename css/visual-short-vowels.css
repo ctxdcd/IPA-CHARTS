@@ -471,6 +471,115 @@ body {
   box-shadow: 0 12px 30px rgba(78, 161, 255, 0.35);
 }
 
+/* =========================
+   MEMORIZATION MODAL
+   ========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.flip-card {
+  width: min(380px, 92vw);
+  height: 460px;
+  perspective: 1200px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.65s ease;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+
+  backface-visibility: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(24, 31, 48, 0.95);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.flip-front h2 {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+
+.flip-front h4 {
+  margin: 0;
+  text-align: center;
+}
+
+.asset-box {
+  height: 130px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.modal-text {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.compare-box {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 720px) {
   .cta-card {
