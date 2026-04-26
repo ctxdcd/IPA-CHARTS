@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPA Phonology Trainer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div>
+        <p class="eyebrow">English Phonology</p>
+        <h1>IPA Phonology Trainer</h1>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Round</span>
+          <strong id="round">1</strong>
+        </div>
+        <div class="stat-card">
+          <span>Accuracy</span>
+          <strong id="accuracy">100%</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="reference glass">
+        <div class="panel-head">
+          <h2>IPA Reference</h2>
+          <p>Tap a symbol to insert it into the answer box.</p>
+        </div>
+
+        <div class="reference-nav">
+          <button class="ref-tab active" data-ref="vowels">Vowels</button>
+          <button class="ref-tab" data-ref="diphthongs">Diphthongs</button>
+          <button class="ref-tab" data-ref="consonants">Consonants</button>
+        </div>
+
+        <div class="reference-block active" id="ref-vowels">
+          <section class="symbol-group">
+            <h3>Short Vowels</h3>
+            <div class="symbol-grid" id="short-vowel-grid"></div>
+          </section>
+
+          <section class="symbol-group">
+            <h3>Long Vowels</h3>
+            <div class="symbol-grid" id="long-vowel-grid"></div>
+          </section>
+        </div>
+
+        <div class="reference-block" id="ref-diphthongs">
+          <section class="symbol-group">
+            <h3>Diphthongs</h3>
+            <div class="symbol-grid" id="diphthong-grid"></div>
+          </section>
+        </div>
+
+        <div class="reference-block" id="ref-consonants">
+          <section class="symbol-group">
+            <h3>Consonants</h3>
+            <div class="symbol-grid" id="consonant-grid"></div>
+          </section>
+
+          <section class="symbol-group">
+            <h3>Affricates</h3>
+            <div class="symbol-grid" id="affricate-grid"></div>
+          </section>
+        </div>
+      </aside>
+
+      <section class="practice glass">
+        <div class="practice-head">
+          <div>
+            <p class="eyebrow">Practice Mode</p>
+            <h2 id="category-title">Monophthongs</h2>
+            <p class="subtitle">Type the IPA for the given word.</p>
+          </div>
+
+          <div class="practice-switcher">
+            <button class="mode-btn active" data-mode="monophthongs">Monophthongs</button>
+            <button class="mode-btn" data-mode="diphthongs">Diphthongs</button>
+            <button class="mode-btn" data-mode="consonants">Consonants</button>
+          </div>
+        </div>
+
+        <div class="card-area">
+          <div class="word-card">
+            <p class="card-label">Word</p>
+            <h2 id="target-word">Sheep</h2>
+            <p class="hint" id="hint-text">English pronunciation practice</p>
+          </div>
+
+          <div class="answer-card">
+            <label for="ipa-input">Your answer</label>
+            <input
+              type="text"
+              id="ipa-input"
+              placeholder="Type IPA here..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <div class="action-row">
+              <button id="check-btn" class="primary-btn">Check</button>
+              <button id="reveal-btn" class="secondary-btn">Reveal</button>
+              <button id="next-btn" class="secondary-btn">Next</button>
+            </div>
+            <p id="feedback-msg" class="feedback"></p>
+          </div>
+        </div>
+
+        <div class="mini-bar">
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Progress</span>
+              <span id="progress-text">1 / 1</span>
+            </div>
+            <div class="progress-track">
+              <div id="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

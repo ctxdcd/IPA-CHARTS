@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPA Quiz Trainer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div>
+        <p class="eyebrow">IPA Quiz Trainer</p>
+        <h1>Guess the Symbol</h1>
+        <p class="subhead">Read the sound clue, choose the correct IPA symbol.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Streak</span>
+          <strong id="streak">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Accuracy</span>
+          <strong id="accuracy">100%</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar glass">
+        <div class="panel-head">
+          <h2>Quiz Bank</h2>
+          <p>Choose the section you want to master.</p>
+        </div>
+
+        <div class="main-tabs">
+          <button class="main-tab active" data-main="monophthongs">Monophthongs</button>
+          <button class="main-tab" data-main="diphthongs">Diphthongs</button>
+          <button class="main-tab" data-main="consonants">Consonants</button>
+        </div>
+
+        <div class="subtabs-wrap">
+          <div class="sub-tabs active" data-wrap="monophthongs">
+            <button class="sub-tab active" data-main="monophthongs" data-sub="long">Long</button>
+            <button class="sub-tab" data-main="monophthongs" data-sub="short">Short</button>
+          </div>
+
+          <div class="sub-tabs" data-wrap="diphthongs">
+            <button class="sub-tab active" data-main="diphthongs" data-sub="all">All Diphthongs</button>
+          </div>
+
+          <div class="sub-tabs" data-wrap="consonants">
+            <button class="sub-tab active" data-main="consonants" data-sub="plosives">Plosives</button>
+            <button class="sub-tab" data-main="consonants" data-sub="fricatives">Fricatives</button>
+            <button class="sub-tab" data-main="consonants" data-sub="affricates">Affricates</button>
+            <button class="sub-tab" data-main="consonants" data-sub="nasals">Nasals</button>
+            <button class="sub-tab" data-main="consonants" data-sub="approximants">Approximants</button>
+          </div>
+        </div>
+
+        <div class="definition-card glass-inner">
+          <p class="definition-eyebrow">Definition</p>
+          <h3 id="definition-title">Long Monophthongs</h3>
+          <p id="definition-text">Long vowels are pure vowels that are held longer in pronunciation.</p>
+          <div class="definition-meta" id="definition-meta">5 symbols</div>
+        </div>
+
+        <div class="reference-panel">
+          <p class="reference-title">Reference symbols</p>
+          <div class="reference-grid" id="reference-grid"></div>
+        </div>
+      </aside>
+
+      <section class="quiz glass">
+        <div class="quiz-head">
+          <div>
+            <p class="eyebrow">Active Recall</p>
+            <h2 id="section-title">Long Monophthongs</h2>
+            <p class="subhead" id="section-note">Choose the symbol that matches the sound clue.</p>
+          </div>
+
+          <div class="quiz-controls">
+            <button class="pill-btn" id="restart-btn">Restart</button>
+            <button class="pill-btn" id="shuffle-btn">Shuffle</button>
+            <button class="pill-btn primary" id="next-btn">Next</button>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-top">
+            <span class="question-chip" id="question-chip">Question 1</span>
+            <span class="question-chip subtle" id="question-count">1 / 1</span>
+          </div>
+
+          <h3 id="question-text">Loading...</h3>
+          <p class="question-help">Pick the correct IPA symbol.</p>
+
+          <div class="options-grid" id="options-grid"></div>
+
+          <div class="result-box" id="result-box">
+            <p id="result-text"></p>
+          </div>
+        </div>
+
+        <div class="bottom-bar">
+          <div class="progress-wrap">
+            <div class="progress-top">
+              <span>Progress</span>
+              <span id="progress-text">0%</span>
+            </div>
+            <div class="progress-track">
+              <div id="progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="hint-line">
+            <span>Keyboard:</span>
+            <strong>1</strong> <strong>2</strong> <strong>3</strong> <strong>4</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
