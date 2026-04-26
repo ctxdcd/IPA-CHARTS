@@ -459,3 +459,9 @@ document.addEventListener("keydown", (e) => {
 
 buildPool();
 loadQuestion();
+
+
+// CTA BUTTON (memorize mode navigation)
+document.getElementById("memorize-btn").addEventListener("click", () => {
+  window.location.href = "memorize.html";
+});
