@@ -15,7 +15,7 @@ const sounds = [
     asset: "Add your 3D asset later"
   },
   {
-    symbol: "/e/",
+    symbol: "/ɛ/",
     name: "DRESS sound",
     desc: "Front, mid, open-mid vowel.",
     tongue: "Front and a little open.",
@@ -26,7 +26,7 @@ const sounds = [
     mnemonic: "The Mirror",
     word: "bed",
     logic: "The mouth shape is open and clear, like something easy to face in a mirror.",
-    compare: "/bed/",
+    compare: "/bɛd/",
     asset: "Add your 3D asset later"
   },
   {

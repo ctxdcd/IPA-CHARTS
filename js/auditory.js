@@ -1,6 +1,6 @@
 const sounds = [
   { symbol: "/ɪ/", name: "KIT", speak: "ih", examples: ["sit", "fish"] },
-  { symbol: "/e/", name: "DRESS", speak: "eh", examples: ["bed", "ten"] },
+  { symbol: "/ɛ/", name: "DRESS", speak: "eh", examples: ["bed", "ten"] },
   { symbol: "/æ/", name: "TRAP", speak: "aeh", examples: ["cat", "bag"] },
   { symbol: "/ʌ/", name: "STRUT", speak: "uh", examples: ["cut", "sun"] },
   { symbol: "/ɒ/", name: "LOT", speak: "oh", examples: ["dog", "hot"] },

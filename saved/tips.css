@@ -1,0 +1,142 @@
+
+
+/* ==========================================================================
+   TIPS
+   ========================================================================== */
+
+   .tips-section {
+  margin-top: 10px;
+  padding: 24px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(15, 20, 32, 0.86);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.tips-head {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.tips-head h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  letter-spacing: -0.05em;
+}
+
+.tips-copy {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tip-card {
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.03);
+}
+
+.tip-main {
+  grid-column: 1 / -1;
+}
+
+.tip-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.16rem;
+  letter-spacing: -0.04em;
+}
+
+.tip-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.tip-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(78, 161, 255, 0.10);
+  color: var(--text);
+  border: 1px solid rgba(78, 161, 255, 0.18);
+}
+
+.tip-example {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tip-example span {
+  color: var(--text);
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.tip-example strong {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.tip-note {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.tip-wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 960px) {
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-main,
+  .tip-wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .tips-section {
+    padding: 18px;
+  }
+
+  .tip-card {
+    padding: 16px;
+  }
+
+  .tip-example {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
