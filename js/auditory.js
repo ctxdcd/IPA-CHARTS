@@ -1,11 +1,54 @@
 const sounds = [
-  { symbol: "/ɪ/", name: "KIT", speak: "ih", examples: ["sit", "fish"] },
-  { symbol: "/ɛ/", name: "DRESS", speak: "eh", examples: ["bed", "ten"] },
-  { symbol: "/æ/", name: "TRAP", speak: "aeh", examples: ["cat", "bag"] },
-  { symbol: "/ʌ/", name: "STRUT", speak: "uh", examples: ["cut", "sun"] },
-  { symbol: "/ɒ/", name: "LOT", speak: "oh", examples: ["dog", "hot"] },
-  { symbol: "/ʊ/", name: "FOOT", speak: "oo", examples: ["book", "good"] },
-  { symbol: "/ə/", name: "Schwa", speak: "uh", examples: ["about", "sofa"] }
+  {
+    symbol: "/ɪ/",
+    name: "KIT",
+    audio: "../../audio/kit.mp3",
+    examples: ["sit", "fish"]
+  },
+
+  {
+    symbol: "/ʊ/",
+    name: "FOOT",
+    audio: "../../audio/foot.mp3",
+    examples: ["book", "good"]
+  },
+
+  {
+    symbol: "/ʌ/",
+    name: "STRUT",
+    audio: "../../audio/strut.mp3",
+    examples: ["cut", "sun"]
+  },
+
+   {
+    symbol: "/ɒ/",
+    name: "LOT",
+    audio: "../../audio/lot.mp3",
+    examples: ["dog", "hot"]
+  },
+
+  {
+    symbol: "/ə/",
+    name: "Schwa",
+    audio: "../../audio/schwa.mp3",
+    examples: ["about", "sofa"]
+  },
+
+  {
+    symbol: "/e/",
+    name: "bed",
+    audio: "../../audio/bed.mp3",
+    examples: ["dress", "ten"]
+  },
+
+  {
+    symbol: "/æ/",
+    name: "TRAP",
+    audio: "../../audio/trap.mp3",
+    examples: ["cat", "bag"]
+  },
+
+
 ];
 
 let index = 0;
@@ -14,32 +57,46 @@ let loop = null;
 const soundBox = document.getElementById("sounds");
 const status = document.getElementById("status");
 
-function speak(text) {
-  const u = new SpeechSynthesisUtterance(text);
-  u.rate = 0.9;
-  u.lang = "en-US";
-  speechSynthesis.cancel();
-  speechSynthesis.speak(u);
+const player = new Audio();
+
+function playSound(src) {
+  player.pause();
+
+  player.src = src;
+
+  player.currentTime = 0;
+
+  player.play();
 }
 
 function render() {
   soundBox.innerHTML = "";
 
   sounds.forEach((s, i) => {
+
     const div = document.createElement("div");
+
     div.className = "sound";
+
     div.innerHTML = `
       <div>
         <strong>${s.symbol}</strong>
-        <div style="color:#94a3b8;font-size:0.8rem">${s.name}</div>
+
+        <div style="color:#94a3b8;font-size:0.8rem">
+          ${s.name}
+        </div>
       </div>
+
       <button>▶</button>
     `;
 
     div.onclick = () => {
+
       index = i;
-      speak(s.speak);
-      status.textContent = `Now: ${s.symbol}`;
+
+      playSound(s.audio);
+
+      status.textContent = `Now playing: ${s.symbol}`;
     };
 
     soundBox.appendChild(div);
@@ -47,30 +104,45 @@ function render() {
 }
 
 document.getElementById("start").onclick = () => {
+
   stopLoop();
 
-  status.textContent = "Loop started. No thinking, just hearing.";
+  status.textContent =
+    "Loop started. No thinking, just hearing.";
 
   loop = setInterval(() => {
+
     const s = sounds[index % sounds.length];
-    speak(s.speak);
+
+    playSound(s.audio);
+
     status.textContent = `Looping: ${s.symbol}`;
+
     index++;
-  }, 2000);
+
+  }, 2500);
 };
 
 document.getElementById("stop").onclick = stopLoop;
 
 function stopLoop() {
+
   clearInterval(loop);
+
   loop = null;
-  speechSynthesis.cancel();
+
+  player.pause();
+
+  player.currentTime = 0;
+
   status.textContent = "Stopped.";
 }
 
 document.getElementById("speak").onclick = () => {
+
   const s = sounds[index % sounds.length];
-  speak(s.speak);
+
+  playSound(s.audio);
 };
 
 render();

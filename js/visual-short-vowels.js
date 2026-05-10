@@ -15,20 +15,21 @@ const sounds = [
     asset: "Add your 3D asset later"
   },
   {
-    symbol: "/ɛ/",
-    name: "DRESS sound",
-    desc: "Front, mid, open-mid vowel.",
-    tongue: "Front and a little open.",
-    x: 34,
-    y: 42,
-    examples: ["bed", "ten", "help"],
-    anchor: "bed",
-    mnemonic: "The Mirror",
-    word: "bed",
-    logic: "The mouth shape is open and clear, like something easy to face in a mirror.",
-    compare: "/bɛd/",
-    asset: "Add your 3D asset later"
-  },
+  symbol: "/e/",
+  name: "BED sound",
+  desc: "Front, mid-open vowel.",
+  tongue: "The front of the tongue is raised to a mid-height position.",
+  x: 34,
+  y: 42,
+  examples: ["bed", "ten", "help"],
+  anchor: "bed",
+  mnemonic: "The Bed Frame",
+  word: "bed",
+  logic: "The mouth is halfway open, creating a stable shape like a rectangular bed frame.",
+  compare: "/bed/",
+  asset: "Add your 3D asset later"
+},
+
   {
     symbol: "/æ/",
     name: "TRAP sound",

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auditory Loop Trainer</title>
+
   <link rel="stylesheet" href="../../css/auditory.css" />
 </head>
 <body>
@@ -15,9 +16,12 @@
     <!-- HERO -->
     <section class="hero">
       <p class="chip">Auditory Mode</p>
+
       <h1>Hear it. Repeat it. Lock it.</h1>
+
       <p class="sub">
-        No theory overload. Just sound repetition until your brain stops translating and starts reacting.
+        No theory overload. Just sound repetition until your brain
+        stops translating and starts reacting.
       </p>
     </section>
 
@@ -26,24 +30,41 @@
 
       <!-- LOOP CONTROL -->
       <div class="card main">
-        <div class="head">
+
+        <!-- AUDIO VISUAL -->
+        <div class="player-visual">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- TITLE -->
+        <div class="head center">
           <div>
             <p class="label">Loop Engine</p>
             <h2>Automatic repetition</h2>
           </div>
         </div>
 
-        <p id="status">Tap start to begin sound loop.</p>
+        <!-- STATUS -->
+        <p id="status">
+          Tap start to begin sound loop.
+        </p>
 
+        <!-- CONTROLS -->
         <div class="controls">
           <button id="start">Start</button>
           <button id="stop">Stop</button>
           <button id="speak">Speak</button>
         </div>
+
       </div>
 
       <!-- SOUND LIST -->
       <div class="card list">
+
         <div class="head">
           <div>
             <p class="label">Sound Bank</p>
@@ -51,13 +72,35 @@
           </div>
         </div>
 
-        <div id="sounds"></div>
+        <div id="sounds">
+
+          <div class="sound">
+            <span>Hello</span>
+            <span>▶</span>
+          </div>
+
+          <div class="sound">
+            <span>Good Morning</span>
+            <span>▶</span>
+          </div>
+
+          <div class="sound">
+            <span>How are you?</span>
+            <span>▶</span>
+          </div>
+
+          <div class="sound">
+            <span>I understand</span>
+            <span>▶</span>
+          </div>
+
+        </div>
+
       </div>
 
     </section>
 
   </main>
-
-  <script src="../../js/auditory.js"></script>
+<script src="../../js/auditory.js"></script>
 </body>
 </html>
